@@ -8,6 +8,8 @@
     align-items: center;
     color: white;
     font-size: 12px;
+    position: absolute;
+    bottom: 0;
 }
 
 .container a{

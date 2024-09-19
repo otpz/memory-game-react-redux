@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import MemoryGame from './components/MemoryGame/MemoryGame'
 import Footer from './components/Footer/Footer'
+import NameInput from './components/NameInput/NameInput'
 
 const App = () => {
   
