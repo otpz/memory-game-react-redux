@@ -130,7 +130,7 @@ const MemoryGame = ({ stage, placesMatrix, nextStage, prevStage }: { stage: numb
         isStageCompleted && (
         <div className={styles.bottom_buttons}>
           {<button onClick={prevStage} disabled={stage === 1} className={styles.change_level_buttons}><FaArrowLeft /> Previous Level</button>}
-          {<button onClick={nextStage} disabled={stage === 5} className={styles.change_level_buttons}>Next Level<FaArrowRight /></button>}
+          {<button onClick={nextStage} disabled={stage === 6} className={styles.change_level_buttons}>Next Level<FaArrowRight /></button>}
         </div>
         )
       }

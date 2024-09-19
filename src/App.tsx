@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import MemoryGame from './components/MemoryGame/MemoryGame'
 import Footer from './components/Footer/Footer'
-import NameInput from './components/NameInput/NameInput'
 
 const App = () => {
   
@@ -75,7 +74,15 @@ const App = () => {
 
   return (
     <div className="container">
-      <MemoryGame stage={stageCounter} placesMatrix={stages[stageCounter-1]} nextStage={nextStage} prevStage={prevStage}/>
+      {!(stageCounter > 5) && <MemoryGame stage={stageCounter} placesMatrix={stages[stageCounter-1]} nextStage={nextStage} prevStage={prevStage}/>} 
+      {
+        stageCounter === 6 && (
+        <div className="end_game">
+          <p>You finished the game congratulations!</p>
+          <button onClick={() => setStageCounter(1)} className='restart'>Restart</button>
+        </div>
+        )
+      }
       <Footer/>
     </div>
   )
